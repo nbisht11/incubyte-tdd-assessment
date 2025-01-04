@@ -19,3 +19,8 @@ test("add should return the sum for n numbers separated by a comma in the string
     expect(add("1,2,3,4,5")).toBe(15);
     expect(add("11,12,60")).toBe(83);
 });
+
+test("add should return the sum for n numbers separated by a comma or a newline character in the string", () => {
+    expect(add("2\n8")).toBe(10);
+    expect(add("12,16\n22")).toBe(50);
+});
