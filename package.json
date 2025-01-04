@@ -1,0 +1,14 @@
+{
+  "name": "incubyte-tdd-assessment",
+  "version": "1.0.0",
+  "description": "assessment for tdd development",
+  "main": "stringCalculator/src/stringCalculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}

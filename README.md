@@ -1,4 +1,4 @@
-#Incubyte TDD Assessment
+# Incubyte TDD Assessment
 
 This repo is made for the Test Driven Development Assessment to implement a string calculator.
 
