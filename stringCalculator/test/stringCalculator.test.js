@@ -24,3 +24,8 @@ test("add should return the sum for n numbers separated by a comma or a newline 
     expect(add("2\n8")).toBe(10);
     expect(add("12,16\n22")).toBe(50);
 });
+
+test("add should return the sum for n numbers separated by a custom delimeter which follows the pattern {//[delimiter]\n[numbers…]}", () => {
+    expect(add("//;\n2;8")).toBe(10);
+    expect(add("//@\n14@24")).toBe(38);
+});
