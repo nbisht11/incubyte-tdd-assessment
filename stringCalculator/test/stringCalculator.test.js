@@ -34,3 +34,8 @@ test("add should throw an error in case negative numbers are passed in the strin
     expect(() => add("//@\n14@-4")).toThrow("negative numbers not allowed -4");
     expect(() => add("11,12,-60,-2")).toThrow("negative numbers not allowed -60,-2");
 });
+
+test("add should exclude numbers which are greater than 1000 in the sum", () => {
+    expect(add("//@\n14@1024@100")).toBe(114);
+    expect(add("11,1022,610")).toBe(621);
+});
