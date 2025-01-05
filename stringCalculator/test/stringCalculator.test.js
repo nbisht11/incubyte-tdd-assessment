@@ -29,3 +29,8 @@ test("add should return the sum for n numbers separated by a custom delimeter wh
     expect(add("//;\n2;8")).toBe(10);
     expect(add("//@\n14@24")).toBe(38);
 });
+
+test("add should throw an error in case negative numbers are passed in the string", () => {
+    expect(() => add("//@\n14@-4")).toThrow("negative numbers not allowed -4");
+    expect(() => add("11,12,-60,-2")).toThrow("negative numbers not allowed -60,-2");
+});
