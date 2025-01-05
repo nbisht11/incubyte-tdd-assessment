@@ -7,11 +7,12 @@ function add(numbers) {
         numbers = numbersAndDelimiter[1];
     }
 
-    const numbersArray = numbers.split(delimiter);
+    let numbersArray = numbers.split(delimiter);
     const negativeNumbers = numbersArray.filter(num => num < 0);
     if (negativeNumbers.length > 0) {
         throw new Error(`negative numbers not allowed ${negativeNumbers.join(",")}`);
     }
+    numbersArray = numbersArray.filter(num => num <= 1000);
     const sum = numbersArray.reduce((total, num) => total + parseInt(num, 10), 0);
     return sum;
 }
